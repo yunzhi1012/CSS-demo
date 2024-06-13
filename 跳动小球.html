@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="circle"></div>
+        <div class="shadow"></div>
+    </div>
+    <style>
+        .wrapper{
+            width: 200px;
+            height: 60px;
+            position: relative;
+        }
+        .circle{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-color: #000;
+            border-radius: 50%;
+            animation: 
+                ball
+                .5s
+                alternate
+                infinite
+                ease
+        }
+        .shadow {
+            width: 20px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.9);
+            position: absolute;
+            top: 62px;
+            animation: shadow .5s alternate infinite ease
+        }
+        @keyframes shadow {
+            0% {
+                transform: scaleX(1.5);
+            }
+            40% {
+                transform: scaleX(1);
+                opacity: .7;
+            }
+            100% {
+                transform: scaleX(.2);
+                opacity: .4;
+            }
+        }
+        @keyframes ball {
+            0% {
+                top: 60px;
+                height: 5px;
+                border-radius: 50px 50px 25px 25px;
+                transform: scaleX(1.5);
+            }
+            40% {
+                height: 20px;
+                border-radius: 50%;
+                transform: scaleX(1);
+            }
+            100% {
+                top: 0%
+            }
+        }
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 相邻选择器 */
+        .list + li {
+            background: red;
+        }
+        /* 后代选择器 */
+        ul li {
+            background: blue;
+        }
+        /*  子元素选择器 */
+        li > p {
+            background: #fff;
+        }
+        /*  属性选择器 */
+        div[aaa] {
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <p>111</p>
+            <p>222</p>
+        </li>
+        <li class="list">2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div aaa>属性</div>
+</body>
+</html>
